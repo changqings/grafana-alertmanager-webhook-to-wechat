@@ -1,4 +1,4 @@
-# Copy from https://github.com/n0vad3v/g2ww and update
+# Copy from https://github.com/n0vad3v/g2ww and update @2021/07/27
 
 # G2WW (Grafana 2 Wechat Work)
 > Proxy Grafana Webhook alert to WeChat Work.
