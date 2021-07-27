@@ -165,7 +165,7 @@ func GwWorker() func(c *fiber.Ctx) {
 			var OK = GfOK
 			var Alerting = GfAlerting
 
-			NewRuleUrl := strings.Replace(h.RuleUrl, "http://localhost:3000", "https://yourown.com", -1)
+			NewRuleUrl := strings.Replace(h.RuleUrl, "http://localhost:3000", "https://yourown.com", -1)
 
 			h.Title, color = SedColor(h.Title, OK, OKMsg, Alerting, AlertingMsg)
 
