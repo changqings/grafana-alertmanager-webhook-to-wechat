@@ -1,0 +1,85 @@
+// resolved
+{
+  "receiver": "notification",
+  "status": "resolved",
+  "alerts": [
+    {
+      "status": "resolved",
+      "labels": {
+        "alertName": "业务模块访问质量",
+        "alertname": "xxxx",
+        "notification": "alert-xxx"
+      },
+      "annotations": {
+        "alertName": "业务模块访问质量",
+        "content": "首页告警",
+        "describe": "模块请求成功率小于90%",
+        "notification": "alert-xxx"
+      },
+      "startsAt": "2021-07-26T12:24:49.604648598Z",
+      "endsAt": "2021-07-26T12:42:19.604648598Z",
+      "generatorURL": "/graph?xx",
+      "fingerprint": "xxx"
+    }
+  ],
+  "groupLabels": {
+    "alertName": "业务模块访问质量",
+    "alertname": "xxx",
+    "notification": "alert-xxx"
+  },
+  "commonLabels": {
+    "alertName": "业务模块访问质量",
+    "alertname": "xxxx",
+    "notification": "alert-xxx"
+  },
+  "commonAnnotations": {
+    "alertName": "业务模块访问质量",
+    "content": "首页告警",
+    "describe": "模块请求成功率小于90%",
+    "notification": "alert-xxx"
+  },
+  "externalURL": "http://alertmanager-0:9093"
+}
+
+// alerting
+{
+  "receiver": "notification",
+  "status": "firing",
+  "alerts": [
+    {
+      "status": "firing",
+      "labels": {
+        "alertName": "业务模块访问质量",
+        "alertname": "xxx",
+        "notification": "alert-xxx"
+      },
+      "annotations": {
+        "alertName": "业务模块访问质量",
+        "content": "告警测试",
+        "describe": "模块请求成功率小于25%",
+        "notification": "alert-xxx"
+      },
+      "startsAt": "2021-07-26T12:24:49.604648598Z",
+      "endsAt": "0001-01-01T00:00:00Z",
+      "generatorURL": "/graph?xx"
+      "fingerprint": "xxx"
+    }
+  ],
+  "groupLabels": {
+    "alertName": "业务模块访问质量",
+    "alertname": "xxx",
+    "notification": "alert-xxx"
+  },
+  "commonLabels": {
+    "alertName": "业务模块访问质量",
+    "alertname": "xxx",
+    "notification": "alert-xxx"
+  },
+  "commonAnnotations": {
+    "alertName": "业务模块访问质量",
+    "content": "告警测试",
+    "describe": "模块请求成功率小于25%",
+    "notification": "alert-xxx"
+  },
+  "externalURL": "http://alertmanager-0:9093"
+}

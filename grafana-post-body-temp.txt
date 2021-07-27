@@ -1,0 +1,37 @@
+// post alert body
+{
+    "dashboardId": 22,
+    "evalMatches": [
+      {
+        "value": 450.4,
+        "metric": "alert",
+        "tags": {
+          "consumergroup": "event-processor",
+          "topic": "event-sink"
+        }
+      }
+    ],
+    "orgId": 1,
+    "panelId": 12,
+    "ruleId": 1,
+    "ruleName": "event-sink consumer 队列 大于 10000",
+    "ruleUrl": "http://localhost:3000/d/jwPKIsniz/kafka-exporter-overview?tab=alert&viewPanel=12&orgId=1",
+    "state": "alerting",
+    "tags": {},
+    "title": "[Alerting] event-sink consumer 队列 大于 10000"
+}
+
+// post ok body
+{
+    "dashboardId": 22,
+    "evalMatches": [],
+    "orgId": 1,
+    "panelId": 12,
+    "ruleId": 1,
+    "ruleName": "event-sink consumer 队列 大于 10000",
+    "ruleUrl": "http://localhost:3000/d/jwPKIsniz/kafka-exporter-overview?tab=alert&viewPanel=12&orgId=1",
+    "state": "ok",
+    "tags": {},
+    "title": "[OK] event-sink consumer 队列 大于 10000"
+  }
+  

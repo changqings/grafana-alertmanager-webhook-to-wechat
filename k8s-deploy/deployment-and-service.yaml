@@ -1,0 +1,48 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: grafana-webhook-receiver
+  namespace: base
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grafana-webhook-receiver
+  template:
+    metadata:
+      labels:
+        app: grafana-webhook-receiver
+    spec:
+      containers:
+      - image: ccr.ccs.tencentyun.com/xxxx/grafana-webhook-receiver:v0.8
+        name: grafana-webhook-receiver
+        tty: true
+        ports:
+        - containerPort: 2408
+          name: http
+          protocol: TCP
+        name: grafana
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+      - name: xxxx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    service.kubernetes.io/qcloud-loadbalancer-internal-subnetid: subnet-xxxx
+  labels:
+    app: grafana-webhook-receiver
+  name: grafana-webhook-receiver
+  namespace: base
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 2408
+  selector:
+    app: grafana-webhook-receiver
+  type: LoadBalancer
