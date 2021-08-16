@@ -164,16 +164,18 @@ func GwWorker() func(c *fiber.Ctx) {
 			var h *GHook = new(GHook)
 			var OK = GfOK
 			var Alerting = GfAlerting
-
-			NewRuleUrl := strings.Replace(h.RuleUrl, "http://localhost:3000", "https://yourown.com", -1)
-
-			h.Title, color = SedColor(h.Title, OK, OKMsg, Alerting, AlertingMsg)
-
+			
+			
 			if err := c.BodyParser(h); err != nil {
 				fmt.Println(err)
 				c.Send("Error on JSON format")
 				return
 			}
+
+			NewRuleUrl := strings.Replace(h.RuleUrl, "http://localhost", "https://yourown.com", -1)
+
+			h.Title, color = SedColor(h.Title, OK, OKMsg, Alerting, AlertingMsg)
+
 
 			if h.State == "ok" {
 				okMsgStr := fmt.Sprintf(`
