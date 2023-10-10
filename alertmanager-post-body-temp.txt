@@ -61,7 +61,7 @@
       },
       "startsAt": "2021-07-26T12:24:49.604648598Z",
       "endsAt": "0001-01-01T00:00:00Z",
-      "generatorURL": "/graph?xx"
+      "generatorURL": "/graph?xx",
       "fingerprint": "xxx"
     }
   ],
